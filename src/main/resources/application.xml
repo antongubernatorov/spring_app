@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="connectionPool" class="ru.gubern.database.pool.ConnectionPool">
+        <constructor-arg value="postgres"/>
+        <constructor-arg value="10"/>
+        <constructor-arg>
+            <list>
+                <value>--arg1=value1</value>
+                <value>--arg1=value2</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="url" value="postgresurl"/>
+                <entry key="password" value="123"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="companyRepository" class="ru.gubern.database.repository.CompanyRepository" factory-method="of">
+        <constructor-arg ref="connectionPool"/>
+    </bean>
+</beans>
