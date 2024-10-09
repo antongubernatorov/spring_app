@@ -1,4 +1,4 @@
-package ru.gubern.bpp;
+package ru.gubern.spring.bpp;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

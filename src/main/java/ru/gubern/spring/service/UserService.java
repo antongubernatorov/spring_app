@@ -1,7 +1,7 @@
-package ru.gubern.service;
+package ru.gubern.spring.service;
 
-import ru.gubern.database.repository.CompanyRepository;
-import ru.gubern.database.repository.UserRepository;
+import ru.gubern.spring.database.repository.CompanyRepository;
+import ru.gubern.spring.database.repository.UserRepository;
 
 public class UserService {
     public final UserRepository userRepository;

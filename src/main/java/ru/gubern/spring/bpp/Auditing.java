@@ -1,4 +1,4 @@
-package ru.gubern.bpp;
+package ru.gubern.spring.bpp;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,6 +7,6 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.CLASS)
 @Target(ElementType.TYPE)
-public @interface Transaction {
+public @interface Auditing {
 
 }

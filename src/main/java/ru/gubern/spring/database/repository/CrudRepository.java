@@ -1,4 +1,4 @@
-package ru.gubern.database.repository;
+package ru.gubern.spring.database.repository;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package ru.gubern.bpp;
+package ru.gubern.spring.bpp;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

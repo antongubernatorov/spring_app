@@ -1,12 +1,11 @@
-package ru.gubern.database.repository;
+package ru.gubern.spring.database.repository;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import ru.gubern.bpp.InjectBean;
-import ru.gubern.bpp.Transaction;
-import ru.gubern.database.entity.Company;
-import ru.gubern.database.pool.ConnectionPool;
+import ru.gubern.spring.bpp.Transaction;
+import ru.gubern.spring.database.entity.Company;
+import ru.gubern.spring.database.pool.ConnectionPool;
 
 import java.util.Optional;
 
