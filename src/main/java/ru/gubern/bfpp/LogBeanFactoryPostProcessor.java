@@ -1,4 +1,4 @@
-package bfpp;
+package ru.gubern.bfpp;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
