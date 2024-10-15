@@ -12,7 +12,6 @@ import java.awt.*;
 @Import(WebConfiguration.class)
 //@ImportResource("application.xml")
 @Configuration
-@PropertySource("classpath:application.properties")
 @ComponentScan(basePackages = "ru.gubern",
     useDefaultFilters = false,
     includeFilters = {

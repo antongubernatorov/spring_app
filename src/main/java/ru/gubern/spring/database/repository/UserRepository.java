@@ -1,11 +1,12 @@
 package ru.gubern.spring.database.repository;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import ru.gubern.spring.database.pool.ConnectionPool;
 
+@RequiredArgsConstructor
 public class UserRepository {
-    public final ConnectionPool connectionPool;
 
-    public UserRepository(ConnectionPool connectionPool) {
-        this.connectionPool = connectionPool;
-    }
+    @Qualifier("pool2")
+    public final ConnectionPool connectionPool;
 }

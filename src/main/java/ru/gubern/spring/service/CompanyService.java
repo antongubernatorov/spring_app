@@ -1,5 +1,6 @@
 package ru.gubern.spring.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import ru.gubern.spring.database.entity.Company;
@@ -10,17 +11,13 @@ import ru.gubern.spring.listener.entity.EntityEvent;
 
 import java.util.Optional;
 
+@RequiredArgsConstructor
 @Service
 public class CompanyService {
     private final CrudRepository<Integer, Company> companyRepository;
     private final UserService userService;
     private final ApplicationEventPublisher eventPublisher;
 
-    public CompanyService(CrudRepository<Integer, Company> companyRepository, UserService userService, ApplicationEventPublisher eventPublisher) {
-        this.companyRepository = companyRepository;
-        this.userService = userService;
-        this.eventPublisher = eventPublisher;
-    }
 
     public Optional<CompanyReadDto> findById(Integer id){
         return companyRepository.findById(id)
