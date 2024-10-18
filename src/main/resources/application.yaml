@@ -9,3 +9,11 @@ db:
     postgres: 5433
   hosts: localhost,128.0.0.1
 #spring.profiles.active:prod
+
+
+logging:
+  level:
+    root: info
+  file:
+    name: gubern.log
+    path: /
