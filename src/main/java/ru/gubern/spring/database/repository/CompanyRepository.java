@@ -8,6 +8,7 @@ import ru.gubern.spring.bpp.Transaction;
 import ru.gubern.spring.database.entity.Company;
 import ru.gubern.spring.database.pool.ConnectionPool;
 
+import java.util.Collections;
 import java.util.Optional;
 
 @Slf4j
@@ -32,7 +33,7 @@ public class CompanyRepository implements CrudRepository<Integer, Company> {
     @Override
     public Optional<Company> findById(Integer id) {
         log.info("FindById...");
-        return Optional.empty();
+        return Optional.of(new Company(id, null, Collections.emptyMap()));
     }
 
     @Override

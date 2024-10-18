@@ -17,3 +17,17 @@ logging:
   file:
     name: gubern.log
     path: /
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        hbm2ddl:
+          auto: validate
